@@ -17,4 +17,19 @@ export class HomeComponent {
   back = "aliceblue"
 
   imageurl = "https://nareshit.com/wp-content/uploads/2018/08/angular-JS-online-training-nareshit.jpg"
+  isDisabled = true;
+
+  count = 0
+  click(){
+    this.count++;
+  }
+
+  mul(a:number,b:number):number{
+    return a * b
+  }
+
+  min(a:number,b:number):number{
+    return Math.min(a,b)
+  }
 }
+

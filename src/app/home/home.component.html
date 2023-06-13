@@ -2,6 +2,12 @@
 <p>sum of 10 and 20 is {{10+20}}</p>
 <h1>The name is {{name}}</h1>
 <h2>Desigantion : {{getdes()}}</h2>
-<h1 [style.color] = "color" [style.background-color] = "back" >Sea is Blue</h1>
+<h1 [style.color] = "color" [style.background-color] = "back" >Sea is Blue -- {{count}}</h1>
 <img [src]="imageurl" height="150px" width="200px">
-<img bind-src="imageurl" height="150px" width="200px">
+<img bind-src="imageurl" height="150px" width="200px"><br>
+<button [disabled] = "isDisabled">Click Me!</button>
+<p> The count value is : {{count}}</p>
+<button (click) = "click()">Tap me</button>
+<h4>The Product is : {{mul(12,4)}}</h4>
+<h4>Smallest number is : {{min(23,12)}}</h4>
+
