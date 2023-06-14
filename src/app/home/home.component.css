@@ -1,0 +1,16 @@
+h1,p{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    font-family: algerian;
+    font-weight: bolder;
+}
+p{
+    font-family: times new roman;
+    font-weight: 700;
+    color: dimgray;
+    
+}

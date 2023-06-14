@@ -1,14 +1,24 @@
 
-.title {
-    font-family: algerian;
-    font-size: xx-large;
-    font-weight: bolder;
-    background-color: rgb(182, 109, 250);
-    text-align: center;
-    padding: 20px;
-    color:whitesmoke;
+ul li
+{
+    width: 50%;
+    margin-left: 0;
+    margin-right: auto;
 }
 
-#btn1 {
-    margin-left: 20px;
+span{
+    font-size: x-large;
+    color: darkmagenta;
+    text-transform: capitalize;
 }
+
+h2,p{
+    font-family: algerian;
+    font-weight: bolder;
+}
+ul li,p{
+    font-family: times new roman;
+    color: dimgrey;
+    font-weight: 700;
+}
+

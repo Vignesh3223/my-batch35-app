@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MenuComponent } from './menu/menu.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { ImageModule } from 'primeng/image';
+import { ProductComponent } from './product/product.component';
+
+import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,8 @@ import { CardModule } from 'primeng/card';
     HomeComponent,
     NavbarComponent,
     MenuComponent,
+    ProductComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,10 @@ import { CardModule } from 'primeng/card';
     SidebarModule,
     ButtonModule,
     TimelineModule,
-    CardModule
+    CardModule,
+    TabMenuModule,
+    ImageModule,
+    DataViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

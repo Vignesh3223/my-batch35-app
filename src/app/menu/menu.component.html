@@ -1,42 +1,31 @@
-<h1 class="title">SideBar & Timeline</h1>
-<p-sidebar [(visible)]="showSidebar" position="top">
-    <ng-template pTemplate="header">Header Content</ng-template>
-    <ng-template pTemplate="content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusamus
-            delectus dolorum, amet, doloremque a veniam vitae consectetur distinctio sed officia velit maiores illum
-            odit repellendus consequatur! Quisquam, sunt consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusamus
-            delectus dolorum, amet, doloremque a veniam vitae consectetur distinctio sed officia velit maiores illum
-            odit repellendus consequatur! Quisquam, sunt consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusamus
-            delectus dolorum, amet, doloremque a veniam vitae consectetur distinctio sed officia velit maiores illum
-            odit repellendus consequatur! Quisquam, sunt consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusamus
-            delectus dolorum, amet, doloremque a veniam vitae consectetur distinctio sed officia velit maiores illum
-            odit repellendus consequatur! Quisquam, sunt consectetur.</p>
-    </ng-template>
-    <ng-template pTemplate="footer">Footer Content</ng-template>
-</p-sidebar>
-<p-button id="btn1" styleClass="p-button-help" (click)="toggleSidebar()">MENU</p-button>
-
-
-<p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
-    <ng-template pTemplate="marker" let-event>
-        <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">
-            <i [ngClass]="event.icon"></i>
-        </span>
-    </ng-template>
-    <ng-template pTemplate="content" let-event>
-        <p-card [header]="event.status" [subheader]="event.date">
-            <img *ngIf="event.image" [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image"
-                [alt]="event.name" width="200" class="shadow-2" />
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
-                numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis
-                esse, cupiditate
-                neque quas!
-            </p>
-            <button pButton type="button" label="Read more" class="p-button-text"></button>
-        </p-card>
-    </ng-template>
-</p-timeline>
+<div class="grid">
+    <div class="col-8">
+        <h2 class="ms-3 mb-2 title">Co-Founders</h2>
+    <p class="ms-3 title">BoAt was co-founded by Aman Gupta and Sameer Ashok Mehta.</p>
+    <ul class="ms-3">
+        <li><span>Aman Gupta</span> is co-founder and chief marketing officer of BoAt. Prior to co-founding BoAt, Gupta
+            was the
+            director of sales at Harman International, where he oversaw a portfolio of consumer electronics brands
+            including JBL, Harman Kardon, and AKG which Harman International distributes in India. Gupta's first
+            entrepreneurial experience was as co-founder and CEO of Advanced Telemedia Pvt Ltd, which helped launch
+            global brands such as Beats Audio, Sennheiser, and Telex, among others, in the Indian market.</li>
+        <li><span>Sameer Ashok Mehta</span> is co-founder of BoAt. Mehta had entrepreneurial and executive leadership
+            experience prior to co-founding BoAt. He is an owner of Redwood Interactive, which distributes computer
+            gaming hardware and peripherals under the Redgear brand. Mehta is also director at Kores India, a business
+            owned by his family. Mehta was appointed to his directorship at Kores India Limited in February 2010.</li>
+    </ul>
+    <h2 class="ms-3 mt-3 title">Non-Executive Directors</h2>
+    <p class="ms-3 title"><span>Kanwaljit Singh</span> joined the company's board of directors in April 2018. Singh is managing partner of Fireside
+        Ventures, which led a ₹60,000,000 (approximately $900,000 USD) equity funding round in BoAt. The round was not
+        announced until early May 2018.
+    </p>
+    </div>
+    <div class="col-4">
+            <p-image src="https://techcrunch.com/wp-content/uploads/2021/01/L-R-Aman-Gupta-and-Sameer-Mehta-Founders-boAt.jpg"
+                [preview]="true" alt="Image" width="600">
+                <ng-template pTemplate="indicator">
+                    <i class="pi pi-check"></i>
+                </ng-template>
+            </p-image>
+    </div>
+    </div>
