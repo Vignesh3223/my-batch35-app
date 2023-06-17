@@ -1,0 +1,101 @@
+<div class="card">
+    <p-tabView>
+        <p-tabPanel header="Browser">
+            <h2 class="one">Browser Name and Version</h2><br><br>
+            <strong>Browser Name : {{browserName | titlecase }}</strong><br><br>
+            <strong>Browser Version : {{browserVersion | titlecase }}</strong>
+        </p-tabPanel>
+        <p-tabPanel header="Employee Details">
+            <div class="row">
+                <div class="col-6">
+                    <h2> Enter Employee Details</h2>
+                    <label for="name">Employee Name</label><br>
+                    <input type="text" (keyup.enter)="name =$any($event.target).value " (keyup.esc)="name =''"
+                        id="name"><br><br>
+                    <label for="age">Age</label><br>
+                    <input type="text" (keyup.enter)="age=$any($event.target).value" (keyup.esc)="age =''"
+                        id="age"><br><br>
+                    <label for="dept">Department</label><br>
+                    <input type="text" (keyup.enter)="department=$any($event.target).value" (keyup.esc)="department =''"
+                        id="dept"><br><br>
+                    <label for="salary">Salary</label><br>
+                    <input type="text" (keyup.enter)="salary=$any($event.target).value" (keyup.esc)="salary =''"
+                        id="salary">
+                </div>
+                <div class="col-6">
+                    <h2>Employee Details</h2><br>
+
+                    <p>Employee Name : {{name}}</p>
+
+                    <p>Employee Age : {{age}}</p>
+
+                    <p>Employee Department : {{department}}</p>
+
+                    <p>Employee Salary : {{salary}}</p>
+                </div>
+            </div>
+
+
+        </p-tabPanel>
+        <p-tabPanel header="Mouse Events">
+            <h2 class="one">Mouse Events</h2>
+            <p>Tap on the button to increase the Count , The Count is {{count}}</p>
+            <p-button (click)="click()" label="Single Click" styleClass="p-button-info"></p-button><br><br>
+            <p> Double Tap on the button to increase the Count twice , The Count is {{count1}}</p>
+            <p-button (dblclick)="dblclick()" label="Double CLick" styleClass="p-button-success"></p-button><br><br>
+            <p>Over the mouse on the element to increase the count by 3</p>
+            <b (mouseover)="mouseover()">MouseOver </b>
+            <button>the Count is {{count2}}</button><br><br>
+            <p>Enter into the element to increase the count</p>
+            <b (mouseenter)="mouseenter()">MouseEnter </b>
+            <button>the Count is {{count3}}</button><br><br>
+            <p>Leave from the element to increase the count</p>
+            <b (mouseleave)="mouseleave()">MouseLeave </b>
+            <button>the Count is {{count4}}</button><br><br>
+            <p>Mouse up on the element to increase the count</p>
+            <b (mouseup)="mouseup()">MouseUp </b>
+            <button>the Count is {{count5}}</button><br><br>
+            <p>Mouse down on the element to increase the count</p>
+            <b (mousedown)="mousedown()">MouseDown </b>
+            <button>the Count is {{count6}}</button><br><br>
+            <p>Select and drag the element to increase the count</p>
+            <b (drag)="select()">Select & Drag </b>
+            <button>the Count is {{count7}}</button><br><br>
+            <p>Drag and Drop the element to increase the count</p>
+            <b (dragover)="dragdrop()">Drag & Drop </b>
+            <button>the Count is {{count8}}</button><br><br>
+        </p-tabPanel>
+        <p-tabPanel header="Employee Records">
+            <h1 class="one">Employee Records</h1><br>
+            <table class="table table-info table-striped table-hover">
+                <thead>
+                    <tr class="table-dark">
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees">
+                        <td>{{employee.EmployeeID}}</td>
+                        <td>{{employee.EmployeeName}}</td>
+                        <td>{{employee.Department}}</td>
+                        <td>{{employee.Salary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p-tabPanel>
+        <p-tabPanel header="Product Details">
+            <h1 class="one">Product Details</h1>
+            <div class="row rows-col-3">
+                <div class="card" style="width: 18rem;" *ngFor="let product of products">
+                    <img src="{{product.imageUrl}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.productname}}</h5>
+                        <p class="card-text">{{product.price | currency : 'INR'}}</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </p-tabPanel>
+    </p-tabView>

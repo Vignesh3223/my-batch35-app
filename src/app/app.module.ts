@@ -13,8 +13,9 @@ import { CardModule } from 'primeng/card';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { ImageModule } from 'primeng/image';
 import { ProductComponent } from './product/product.component';
-
 import { DataViewModule } from 'primeng/dataview';
+import { TaskComponent } from './task/task.component';
+import { TabViewModule } from 'primeng/tabview';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DataViewModule } from 'primeng/dataview';
     NavbarComponent,
     MenuComponent,
     ProductComponent,
+    TaskComponent,
 
   ],
   imports: [
@@ -36,6 +38,7 @@ import { DataViewModule } from 'primeng/dataview';
     TabMenuModule,
     ImageModule,
     DataViewModule,
+    TabViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
