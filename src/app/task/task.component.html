@@ -87,14 +87,59 @@
         </p-tabPanel>
         <p-tabPanel header="Product Details">
             <h1 class="one">Product Details</h1>
-            <div class="row rows-col-3">
-                <div class="card" style="width: 18rem;" *ngFor="let product of products">
+            <div class="row rows-col-4">
+                <div class="card card1" style="width: 18rem;" *ngFor="let product of products">
                     <img src="{{product.imageUrl}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{product.productname}}</h5>
                         <p class="card-text">{{product.price | currency : 'INR'}}</p>
                         <a href="#" class="btn btn-primary">Buy</a>
                     </div>
+                </div>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="Trainee Details">
+            <h1 class="one">Batch_35 TRAINEES</h1><br>
+            <div class="row">
+                <div class="col-4" *ngFor="let trainee of trainees" [ngSwitch]="trainee.gender">
+                    <div *ngSwitchCase="'Male'">
+                        <p-card class="male" header="Trainee ID: {{trainee.id}}"
+                            subheader="Trainee Name: {{trainee.name}}" [style]="{ width: '360px' }">
+                            <ng-template pTemplate="header">
+                                <img alt="Card" src="{{trainee.imageUrl}}" />
+                            </ng-template>
+                            <p>Gender: {{trainee.gender}}</p>
+                            <p>Domain: {{trainee.domain}}</p>
+                        </p-card>
+                    </div>
+                    <div *ngSwitchCase="'Female'">
+                        <p-card class="female" header="Trainee ID: {{trainee.id}}"
+                            subheader="Trainee Name: {{trainee.name}}" [style]="{ width: '360px' }">
+                            <ng-template pTemplate="header">
+                                <img alt="Card" src="{{trainee.imageUrl}}" />
+                            </ng-template>
+                            <p>Gender: {{trainee.gender}}</p>
+                            <p>Domain: {{trainee.domain}}</p>
+                        </p-card>
+                    </div>
+                </div>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="Trainees Toggle">
+            <h1 class="one">Batch_35 TRAINEES - Toggle Effect</h1><br>
+            <div class="row">
+                <div class="col-4" *ngFor="let trainee of trainees">
+                    <p-card [style]="{ width: '360px' }">
+                        <ng-template pTemplate="header">
+                            <img (click)="toggle(trainee)" alt="Card" src="{{trainee.imageUrl}}" />
+                        </ng-template>
+                        <div [hidden]="!trainee.hide">
+                            <h5>Trainee ID : {{trainee.id}}</h5>
+                            <h5>Trainee Name : {{trainee.name}}</h5>
+                            <h5>Gender : {{trainee.gender}}</h5>
+                            <h5>Domain : {{trainee.domain}}</h5>
+                        </div>
+                    </p-card>
                 </div>
             </div>
         </p-tabPanel>

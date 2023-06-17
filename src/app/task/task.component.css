@@ -1,3 +1,16 @@
-.one{
+.one {
     text-align: center;
+}
+
+.card1 {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.male p {
+    color: red
+}
+
+.female p {
+    color: palevioletred;
 }

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Arun",
+        "gender": "Male",
+        "domain": "Angular JS",
+        "imageUrl": "https://st2.depositphotos.com/2208684/11079/i/950/depositphotos_110794798-stock-photo-professional-man-standing-at-office.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Yamini",
+        "gender": "Female",
+        "domain": "React JS",
+        "imageUrl": "https://img.freepik.com/free-photo/closeup-happy-pretty-indian-business-woman_1262-2258.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Harishmitha",
+        "gender": "Female",
+        "domain": "Vue JS",
+        "imageUrl": "https://c0.wallpaperflare.com/preview/852/396/1019/business-office-business-woman-professional.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Darshan",
+        "gender": "Male",
+        "domain": "React JS",
+        "imageUrl": "https://i.pinimg.com/736x/10/5b/ec/105beccc09e559a4dc9189d6cf3ff8ab.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Haritha",
+        "gender": "Female",
+        "domain": "React JS",
+        "imageUrl": "https://media.istockphoto.com/id/1354842602/photo/portrait-of-a-young-businesswoman-working-on-a-laptop-in-an-office.jpg?s=612x612&w=0&k=20&c=kfP1g2712RiaxsDriIxFo363ARlaL2D591s-22CnIo8="
+    },
+    {
+        "id": 6,
+        "name": "Sharon",
+        "gender": "Male",
+        "domain": "Angular JS",
+        "imageUrl": "https://media.istockphoto.com/id/1059661424/photo/mature-mixed-race-business-man.jpg?s=612x612&w=0&k=20&c=UAVBeyoD_LkCh1MzVaWW1SR1iwK-VkPDXWMH2o2wL8M="
+    }
+]
