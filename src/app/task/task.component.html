@@ -101,26 +101,44 @@
         <p-tabPanel header="Trainee Details">
             <h1 class="one">Batch_35 TRAINEES</h1><br>
             <div class="row">
-                <div class="col-4" *ngFor="let trainee of trainees" [ngSwitch]="trainee.gender">
-                    <div *ngSwitchCase="'Male'">
-                        <p-card class="male" header="Trainee ID: {{trainee.id}}"
-                            subheader="Trainee Name: {{trainee.name}}" [style]="{ width: '360px' }">
-                            <ng-template pTemplate="header">
-                                <img alt="Card" src="{{trainee.imageUrl}}" />
-                            </ng-template>
-                            <p>Gender: {{trainee.gender}}</p>
-                            <p>Domain: {{trainee.domain}}</p>
-                        </p-card>
+                <div class="col-12">
+                    <h2>Male Trainees</h2>
+                    <div class="row">
+                        <ng-container *ngFor="let trainee of trainees">
+                            <ng-container *ngIf="trainee.gender === 'Male'">
+                                <div class="col-4">
+                                    <p-card class="male" header="Trainee ID: {{trainee.id}}"
+                                        subheader="Trainee Name: {{trainee.name}}" [style]="{ width: '360px' }">
+                                        <ng-template pTemplate="header">
+                                            <img alt="Card" src="{{trainee.imageUrl}}" />
+                                        </ng-template>
+                                        <p>Gender: {{trainee.gender}}</p>
+                                        <p>Domain: {{trainee.domain}}</p>
+                                    </p-card>
+                                </div>
+                            </ng-container>
+                        </ng-container>
                     </div>
-                    <div *ngSwitchCase="'Female'">
-                        <p-card class="female" header="Trainee ID: {{trainee.id}}"
-                            subheader="Trainee Name: {{trainee.name}}" [style]="{ width: '360px' }">
-                            <ng-template pTemplate="header">
-                                <img alt="Card" src="{{trainee.imageUrl}}" />
-                            </ng-template>
-                            <p>Gender: {{trainee.gender}}</p>
-                            <p>Domain: {{trainee.domain}}</p>
-                        </p-card>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2>Female Trainees</h2>
+                    <div class="row">
+                        <ng-container *ngFor="let trainee of trainees">
+                            <ng-container *ngIf="trainee.gender === 'Female'">
+                                <div class="col-4">
+                                    <p-card class="female" header="Trainee ID: {{trainee.id}}"
+                                        subheader="Trainee Name: {{trainee.name}}" [style]="{ width: '360px' }">
+                                        <ng-template pTemplate="header">
+                                            <img alt="Card" src="{{trainee.imageUrl}}" />
+                                        </ng-template>
+                                        <p>Gender: {{trainee.gender}}</p>
+                                        <p>Domain: {{trainee.domain}}</p>
+                                    </p-card>
+                                </div>
+                            </ng-container>
+                        </ng-container>
                     </div>
                 </div>
             </div>
