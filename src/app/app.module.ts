@@ -16,6 +16,8 @@ import { ProductComponent } from './product/product.component';
 import { DataViewModule } from 'primeng/dataview';
 import { TaskComponent } from './task/task.component';
 import { TabViewModule } from 'primeng/tabview';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { ProducttableComponent } from './producttable/producttable.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { TabViewModule } from 'primeng/tabview';
     MenuComponent,
     ProductComponent,
     TaskComponent,
+    ProductlistComponent,
+    ProducttableComponent,
 
   ],
   imports: [

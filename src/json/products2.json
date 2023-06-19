@@ -1,0 +1,33 @@
+[
+    {
+        "id":1,
+        "proname":"Pencil",
+        "price" : 10,
+        "quantity" : 90,
+        "image":"https://helloaugust.in/wp-content/uploads/2022/11/staedtler-noris-hb-pencil.jpg"
+    },
+    {
+        "id":2,
+        "proname":"Ruler",
+        "price" : 15,
+        "quantity" : 10,
+        "image":"https://tiimg.tistatic.com/fp/1/007/671/transparent-straight-measuring-plastic-ruler-scale-for-school-kids-office-089.jpg"
+    },
+    {
+        "id":3,
+        "proname":"Pen",
+        "price" : 50,
+        "quantity" : 10,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0nq4S2YIicPvn1Ofz9hwmFDLUOEE_wyjoFQ&usqp=CAU"
+    },
+    {
+        "id":4,
+        "proname":"A4 sheet",
+        "price" : 2,
+        "quantity" : 95,
+        "image":"https://5.imimg.com/data5/SELLER/Default/2021/3/RV/NH/ZR/66158833/a4-size-paper-500x500.jpg"
+    }
+
+] 
+
+
