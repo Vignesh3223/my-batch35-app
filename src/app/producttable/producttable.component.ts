@@ -7,31 +7,32 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ProducttableComponent implements OnInit {
   @Input()
-  productList: Products2[] = [];
+  productList: Products[] = [];
 
   @Output()
-  QuantitySelectedEventEmitter = new EventEmitter();
+  QuantitySelectedEventEmitter = new EventEmitter<number>();
 
-  productSelected(Quantity: number) {
-    this.QuantitySelectedEventEmitter.emit(Quantity);
-  }
   constructor() { }
 
   ngOnInit(): void {
   }
+
   increase(prod: any) {
     if (prod.quantity < 100) {
       prod.quantity++;
-    }
-  }
-  decrease(prod: any) {
-    if (prod.quantity > 0) {
-      prod.quantity--;
+      this.QuantitySelectedEventEmitter.emit(prod.quantity);
     }
   }
 
+  decrease(prod: any) {
+    if (prod.quantity > 0) {
+      prod.quantity--;
+      this.QuantitySelectedEventEmitter.emit(prod.quantity);
+    }
+  }
 }
-interface Products2 {
+
+interface Products {
   id: number,
   proname: string,
   price: number,

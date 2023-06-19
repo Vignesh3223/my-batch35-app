@@ -12,27 +12,24 @@ export class ProductlistComponent implements OnInit {
 
   constructor() { }
 
- selectedProduct(quantity:number) {
-    debugger;
+  selectedProduct(quantity: number) {
     if (quantity > 100) {
       Swal.fire({
         icon: 'error',
         title: 'Limit',
-        text: 'Quantity exceeds the limit',
+        text: 'Quantity cannot be more than 100',
       });
       quantity = 100;
     }
-    if (quantity <= 1) {
+    else if (quantity < 1) {
       Swal.fire({
         icon: 'error',
         title: 'Limit',
-        text: 'Quantity cannot be 0 or less tha that',
+        text: 'Quantity cannot be 0',
       });
       quantity = 1;
     }
   }
-
   ngOnInit(): void { }
-
 }
 
