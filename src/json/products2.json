@@ -17,14 +17,14 @@
         "id":3,
         "proname":"Pen",
         "price" : 50,
-        "quantity" : 10,
+        "quantity" : 3,
         "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0nq4S2YIicPvn1Ofz9hwmFDLUOEE_wyjoFQ&usqp=CAU"
     },
     {
         "id":4,
         "proname":"A4 sheet",
         "price" : 2,
-        "quantity" : 95,
+        "quantity" : 98,
         "image":"https://5.imimg.com/data5/SELLER/Default/2021/3/RV/NH/ZR/66158833/a4-size-paper-500x500.jpg"
     }
 

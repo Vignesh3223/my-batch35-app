@@ -10,26 +10,25 @@ import Swal from 'sweetalert2';
 export class ProductlistComponent implements OnInit {
   myfavproducts: any = (productsdata as any).default
 
-  constructor() { }
-
   selectedProduct(quantity: number) {
-    if (quantity > 100) {
+    debugger;
+    if (quantity >= 100) {
       Swal.fire({
         icon: 'error',
         title: 'Limit',
         text: 'Quantity cannot be more than 100',
       });
-      quantity = 100;
     }
-    else if (quantity < 1) {
+    if (quantity <= 1) {
       Swal.fire({
         icon: 'error',
         title: 'Limit',
-        text: 'Quantity cannot be 0',
+        text: 'Quantity cannot be less than 1',
       });
-      quantity = 1;
     }
   }
+  constructor() { }
+
   ngOnInit(): void { }
 }
 
