@@ -30,7 +30,7 @@ export class SigninComponent implements OnInit {
     Swal.fire({
       icon: 'success',
       title: 'Success',
-      text: 'Signed Up successfully',
+      text: 'Login Success',
     })
     form.resetForm();
   }
