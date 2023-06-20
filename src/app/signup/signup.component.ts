@@ -18,7 +18,7 @@ export class SignupComponent implements OnInit {
       title: 'Success',
       text: 'Signed Up successfully',
     })
-    form.reset();
+    form.resetForm();
   }
   
   ngOnInit(): void { }

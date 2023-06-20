@@ -11,7 +11,6 @@ export class ProductlistComponent implements OnInit {
   myfavproducts: any = (productsdata as any).default
 
   selectedProduct(quantity: number) {
-    debugger;
     if (quantity >= 100) {
       Swal.fire({
         icon: 'error',
