@@ -45,25 +45,25 @@
             <p-button (dblclick)="dblclick()" label="Double CLick" styleClass="p-button-success"></p-button><br><br>
             <p>Over the mouse on the element to increase the count by 3</p>
             <b (mouseover)="mouseover()">MouseOver </b>
-            <button>the Count is {{count2}}</button><br><br>
+            <button type="button" class="btn btn-success">the Count is {{count2}}</button><br><br>
             <p>Enter into the element to increase the count</p>
             <b (mouseenter)="mouseenter()">MouseEnter </b>
-            <button>the Count is {{count3}}</button><br><br>
+            <button type="button" class="btn btn-warning">the Count is {{count3}}</button><br><br>
             <p>Leave from the element to increase the count</p>
             <b (mouseleave)="mouseleave()">MouseLeave </b>
-            <button>the Count is {{count4}}</button><br><br>
+            <button type="button" class="btn btn-dark">the Count is {{count4}}</button><br><br>
             <p>Mouse up on the element to increase the count</p>
             <b (mouseup)="mouseup()">MouseUp </b>
-            <button>the Count is {{count5}}</button><br><br>
+            <button type="button" class="btn btn-secondary">the Count is {{count5}}</button><br><br>
             <p>Mouse down on the element to increase the count</p>
             <b (mousedown)="mousedown()">MouseDown </b>
-            <button>the Count is {{count6}}</button><br><br>
+            <button type="button" class="btn btn-primary">the Count is {{count6}}</button><br><br>
             <p>Select and drag the element to increase the count</p>
             <b (drag)="select()">Select & Drag </b>
-            <button>the Count is {{count7}}</button><br><br>
+            <button type="button" class="btn btn-light">the Count is {{count7}}</button><br><br>
             <p>Drag and Drop the element to increase the count</p>
             <b (dragover)="dragdrop()">Drag & Drop </b>
-            <button>the Count is {{count8}}</button><br><br>
+            <button type="button" class="btn btn-info">the Count is {{count8}}</button><br><br>
         </p-tabPanel>
         <p-tabPanel header="Employee Records">
             <h1 class="one">Employee Records</h1><br>
@@ -163,5 +163,8 @@
         </p-tabPanel>
         <p-tabPanel header="Products">
             <app-productlist></app-productlist>
+        </p-tabPanel>
+        <p-tabPanel header="Template-driven form">
+            <app-signup></app-signup>
         </p-tabPanel>
     </p-tabView>

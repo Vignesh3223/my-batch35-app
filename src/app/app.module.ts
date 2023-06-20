@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +19,7 @@ import { TaskComponent } from './task/task.component';
 import { TabViewModule } from 'primeng/tabview';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProducttableComponent } from './producttable/producttable.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { ProducttableComponent } from './producttable/producttable.component';
     TaskComponent,
     ProductlistComponent,
     ProducttableComponent,
+    SignupComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     SidebarModule,
     ButtonModule,
     TimelineModule,
