@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <h1>Template driven form with Validations</h1>
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-3"></div>
+        <div class="col-6">
             <form #regform="ngForm" (ngSubmit)="regform.form.valid && onSubmit(regform)" novalidate>
                 <div class="form-group mb-3">
                     <label>Firstname</label>
@@ -33,7 +33,7 @@
                 <div class="form-group mb-3">
                     <label>Designation</label>
                     <select class="form-control" name="designation" [(ngModel)]="demo.designation">
-                        <option value="designation">Select an option</option>
+                        <option value="designation" disabled>Select an option</option>
                         <option *ngFor="let desig of designation" [value]="designation">
                             {{ desig }}
                         </option>
@@ -75,6 +75,6 @@
                 </div>
             </form>
         </div>
-        <div class="col-2"></div>
+        <div class="col-3"></div>
     </div>
 </div>

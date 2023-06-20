@@ -20,6 +20,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProducttableComponent } from './producttable/producttable.component';
 import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SignupComponent } from './signup/signup.component';
     ProductlistComponent,
     ProducttableComponent,
     SignupComponent,
+    SigninComponent,
 
   ],
   imports: [
