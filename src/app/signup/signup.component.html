@@ -8,8 +8,11 @@
                     <label>Firstname</label>
                     <input type="text" class="form-control" name="firstname" placeholder="Enter firstname"
                         [(ngModel)]="demo.firstname" #firstname="ngModel"
-                        [ngClass]="{ 'is-invalid': regform.submitted && firstname.invalid }" required minlength="4"
-                        maxlength="12" pattern="^[a-zA-Z ]+$" />
+                        [ngClass]="{ 'is-invalid': regform.submitted && firstname.invalid,'is-valid': firstname.valid}"
+                        required minlength="4" maxlength="12" pattern="^[a-zA-Z ]+$" />
+                    <div class="valid-feedback" *ngIf="firstname.valid">
+                        <p class="text text-success">Firstname is Good</p>
+                    </div>
                     <div class="invalid-feedback" *ngIf="regform.submitted && firstname.invalid">
                         <p class="text text-warning" *ngIf="firstname.errors?.['required']">Firstname is required</p>
                         <p *ngIf="firstname.errors?.['minlength']">Firstname must contain atleast 4 characters</p>
@@ -21,8 +24,11 @@
                     <label>Lastname</label>
                     <input type="text" class="form-control" name="lastname" placeholder="Enter lastname"
                         [(ngModel)]="demo.lastname" #lastname="ngModel"
-                        [ngClass]="{ 'is-invalid': regform.submitted && lastname.invalid }" required minlength="4"
-                        maxlength="12" pattern="^[a-zA-Z ]+$" />
+                        [ngClass]="{ 'is-invalid': regform.submitted && lastname.invalid ,'is-valid': lastname.valid }"
+                        required minlength="4" maxlength="12" pattern="^[a-zA-Z ]+$" />
+                    <div class="valid-feedback" *ngIf="lastname.valid">
+                        <p class="text text-success">Lastname is Good</p>
+                    </div>
                     <div class="invalid-feedback" *ngIf="regform.submitted && lastname.invalid">
                         <p class="text text-warning" *ngIf="lastname.errors?.['required']">Lastname is required</p>
                         <p *ngIf="lastname.errors?.['minlength']">Larstname must contain atleast 4 characters</p>
@@ -41,11 +47,16 @@
                 </div>
                 <div class="form-group mb-3">
                     <label>Phone Number</label>
-                    <input type="phoneNumber" class="form-control" name="phoneNumber" [(ngModel)]="demo.phoneNumber"
-                        #phoneNumber="ngModel" [ngClass]="{ 'is-invalid': regform.submitted && phoneNumber.invalid }"
-                         required minlength="10" />
-                    <div *ngIf="regform.submitted && phoneNumber.invalid" class="invalid-feedback">
-                        <p class="text text-warning" *ngIf="phoneNumber.errors?.['required']">Phone Number is required</p>
+                    <input type="phoneNumber" class="form-control" name="phoneNumber" placeholder="Enter phone number"
+                        [(ngModel)]="demo.phoneNumber" #phoneNumber="ngModel"
+                        [ngClass]="{ 'is-invalid': regform.submitted && phoneNumber.invalid,'is-valid': phoneNumber.valid }"
+                        required minlength="10" />
+                    <div class="valid-feedback" *ngIf="phoneNumber.valid">
+                        <p class="text text-success">Phone Number is Valid</p>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="regform.submitted && phoneNumber.invalid">
+                        <p class="text text-warning" *ngIf="phoneNumber.errors?.['required']">Phone Number is required
+                        </p>
                         <p *ngIf="phoneNumber.errors?.['minlength']">Phone Number must contain 10 digits</p>
                     </div>
                 </div>
@@ -53,7 +64,11 @@
                     <label>Email address</label>
                     <input type="email" class="form-control" name="email" placeholder="Enter email address"
                         [(ngModel)]="demo.email" #email="ngModel"
-                        [ngClass]="{ 'is-invalid': regform.submitted && email.invalid }" required email />
+                        [ngClass]="{ 'is-invalid': regform.submitted && email.invalid,'is-valid': email.valid }"
+                        required email />
+                    <div class="valid-feedback" *ngIf="email.valid">
+                        <p class="text text-success">Email is Valid</p>
+                    </div>
                     <div class="invalid-feedback" *ngIf="regform.submitted && email.invalid">
                         <p class="text text-warning" *ngIf="email.errors?.['required']">Email is required</p>
                         <p *ngIf="email.errors?.['email']">Enter a valid email address</p>
@@ -61,12 +76,17 @@
                 </div>
                 <div class="form-group mb-3">
                     <label>Password</label>
-                    <input type="password" class="form-control" name="password" [(ngModel)]="demo.password"
-                        #password="ngModel" [ngClass]="{ 'is-invalid': regform.submitted && password.invalid }"
-                        minlength="8" required />
+                    <input type="password" class="form-control" name="password" placeholder="Enter a password"
+                        [(ngModel)]="demo.password" #password="ngModel"
+                        [ngClass]="{ 'is-invalid': regform.submitted && password.invalid , 'is-valid': email.valid  }"
+                        minlength="8" maxlength="16" required />
+                        <div class="valid-feedback" *ngIf="password.valid">
+                            <p class="text text-success">Password is Good</p>
+                        </div>
                     <div *ngIf="regform.submitted && password.invalid" class="invalid-feedback">
                         <p class="text text-warning" *ngIf="password.errors?.['required']">Password is required</p>
                         <p *ngIf="password.errors?.['minlength']">Password should be at least 8 characters long</p>
+                        <p *ngIf="password.errors?.['maxlength']">Password should be less than 17 characters</p>
                     </div>
                 </div>
                 <div class="form-group">

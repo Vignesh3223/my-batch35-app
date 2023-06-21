@@ -24,15 +24,13 @@
                     <label>USERNAME</label>
                     <input type="text" class="form-control" placeholder="Enter your username" formControlName="username"
                         [ngClass]="{'is-invalid':username.errors && (username.touched || username.dirty),'is-valid': username.valid}" />
+                    <div class="valid-feedback" *ngIf="username.valid">
+                        <p class="text text-success">Username is Good</p>
+                    </div>
                     <div class="invalid-feedback">
                         <strong *ngIf="username.errors?.required">Username is required</strong>
                         <strong *ngIf="username.errors?.minlength">Username length must be greater than
                             {{ username.errors?.minlength.requiredLength }} characters.
-                            {{
-                            username.errors?.minlength.requiredLength -
-                            username.errors?.minlength.actualLength
-                            }}
-                            more characters required.
                         </strong>
                         <strong *ngIf="username.errors?.maxlength">Username length must be less than 17
                             characters
@@ -41,10 +39,17 @@
                 </div>
                 <div class="form-group mb-3">
                     <label>PASSWORD</label>
-                    <input type="password" class="form-control" formControlName="password"
-                        [ngClass]="{ 'is-invalid':password.errors && (password.touched || password.dirty)}" />
+                    <input type="password" class="form-control" placeholder="Enter your password"
+                        formControlName="password"
+                        [ngClass]="{ 'is-invalid':password.errors && (password.touched || password.dirty),'is-valid': password.valid}" />
+                    <div class="valid-feedback" *ngIf="password.valid">
+                        <p class="text text-success">Password is Good</p>
+                    </div>
                     <div class="invalid-feedback">
-                        <strong>Only Alphabets are allowed. </strong>
+                        <strong *ngIf="password.errors?.required">Password is required</strong>
+                        <strong *ngIf="password.errors?.pattern">Password length should between 8-17 characters and must contain 
+                            an uppercase, a lowercase, a digit and one symbol
+                        </strong>
                     </div>
                 </div>
                 <div class="form-group">
