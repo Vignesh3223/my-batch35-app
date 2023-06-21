@@ -30,20 +30,11 @@ export class SigninComponent implements OnInit {
   }
 
   onSubmit(form: any) {
-    if (form.valid) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: 'Login Success',
-      })
-      form.reset();
-    }
-    else{
-      Swal.fire({
-        icon: 'error',
-        title: 'Login Failed',
-        text: 'Enter valid credentials',
-      })
-    }
+    Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      text: 'Login Success',
+    })
+    form.reset();
   }
 }

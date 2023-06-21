@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-danger btn-block" (click)="onSubmit(myForm1)"> Submit </button>
+                    <button class="btn btn-danger btn-block" [disabled]="!myForm1.valid" (click)="onSubmit(myForm1)"> Submit </button>
                 </div>
             </form>
         </div>
