@@ -22,6 +22,15 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { ProducttableComponent } from './producttable/producttable.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
+import { Products2Component } from './products2/products2.component';
+import { MenFootwearComponent } from './products2/men/men-footwear/men-footwear.component';
+import { MenClothingComponent } from './products2/men/men-clothing/men-clothing.component';
+import { WomenClothingComponent } from './products2/men/women-clothing/women-clothing.component';
+import { WomenFootwearComponent } from './products2/men/women-footwear/women-footwear.component';
+import { KidsFootwearComponent } from './products2/men/kids-footwear/kids-footwear.component';
+import { KidsClothingComponent } from './products2/men/kids-clothing/kids-clothing.component';
+import { Products1Component } from './products1/products1.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +43,15 @@ import { SigninComponent } from './signin/signin.component';
     ProducttableComponent,
     SignupComponent,
     SigninComponent,
+    Products2Component,
+    MenFootwearComponent,
+    MenClothingComponent,
+    WomenClothingComponent,
+    WomenFootwearComponent,
+    KidsFootwearComponent,
+    KidsClothingComponent,
+    Products1Component,
+
 
   ],
   imports: [
