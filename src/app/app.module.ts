@@ -13,8 +13,8 @@ import { ButtonModule } from 'primeng/button';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
 import { TabMenuModule } from 'primeng/tabmenu';
-import { ImageModule } from 'primeng/image';
 import { ProductComponent } from './product/product.component';
+import { ImageModule } from 'primeng/image';
 import { DataViewModule } from 'primeng/dataview';
 import { TaskComponent } from './task/task.component';
 import { TabViewModule } from 'primeng/tabview';
@@ -22,15 +22,14 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { ProducttableComponent } from './producttable/producttable.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
     MenuComponent,
-    ProductComponent,
     TaskComponent,
+    ProductComponent,
     ProductlistComponent,
     ProducttableComponent,
     SignupComponent,
