@@ -13,8 +13,8 @@ import { WomenComponent } from './products2/women/women.component';
 import { WomenClothingComponent } from './products2/men/women-clothing/women-clothing.component';
 import { WomenFootwearComponent } from './products2/men/women-footwear/women-footwear.component';
 import { KidsComponent } from './products2/kids/kids.component';
-import { KidsClothingComponent } from './products2/men/kids-clothing/kids-clothing.component';
-import { KidsFootwearComponent } from './products2/men/kids-footwear/kids-footwear.component';
+import { KidsClothingComponent } from './products2/kids/kids-clothing/kids-clothing.component';
+import { KidsFootwearComponent } from './products2/kids/kids-footwear/kids-footwear.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent
