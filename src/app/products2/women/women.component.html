@@ -1,5 +1,7 @@
 <div class="container mt-5">
     <h1>Women's Wear</h1>
-    <p-button label="Clothing" styleClass="p-button-success me-5"></p-button>
-    <p-button label="Footwear" styleClass="p-button-success"></p-button>
+    <p-button  [routerLink]="['/products2/women/women-clothing']" label="Clothing" styleClass="p-button-success me-5"></p-button>
+    <p-button [routerLink]="['/products2/women/women-footwear']" label="Footwear" styleClass="p-button-success me-5"></p-button>
+    <p-button [routerLink]="['/products2']" label="Back to Home" styleClass="p-button-danger me-5"></p-button>
 </div>
+<router-outlet></router-outlet>
