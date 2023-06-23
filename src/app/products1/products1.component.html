@@ -1,7 +1,39 @@
+<div class="container-fluid">
+    <div class="header">
+        <h1>Product ID: {{ id }}</h1>
+        <button class="btn btn-primary btn-large d-flex" [routerLink]="['/products2']">Back to Home</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.joebrowns.co.uk/media/wysiwyg/6-ML097_012.jpg" class="card-img-top" alt="men">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Wear</h5>
+                        <a [routerLink]="['/products2/men']" class="btn btn-dark">Let's GO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://malanigroup.in/wp-content/uploads/2020/09/shirt-450x450.jpg" class="card-img-top"
+                        alt="women">
+                    <div class="card-body">
+                        <h5 class="card-title">Women's Wear</h5>
+                        <a [routerLink]="['/products2/women']" class="btn btn-dark">Let's GO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://cpimg.tistatic.com/04361682/b/4/Kids-Wear.jpg" class="card-img-top" alt="kids">
+                    <div class="card-body">
+                        <h5 class="card-title">Kids Wear</h5>
+                        <a [routerLink]="['/products2/kids']" class="btn btn-dark">Let's GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<p>Product ID: {{ id }}</p>
-<ul>
-    <li><a [routerLink]="['/products1', 1]">Men's Wear</a></li>
-    <li><a [routerLink]="['/products1', 2]">Women's Wear</a></li>
-    <li><a [routerLink]="['/products1', 3]">Kids Wear </a></li>
-</ul>
+</div>
